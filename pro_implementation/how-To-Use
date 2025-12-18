@@ -1,0 +1,1050 @@
+# Bonyad App - User Guide Documentation for RAG System
+
+This document provides comprehensive information about the Bonyad app features, navigation, and user flows. It is structured for RAG (Retrieval-Augmented Generation) systems to help users via chatbot assistance.
+
+---
+
+## Table of Contents
+
+1. [App Overview](#app-overview)
+2. [User Roles](#user-roles)
+3. [Main Navigation](#main-navigation)
+4. [User Features](#user-features)
+5. [Service Provider Features](#service-provider-features)
+6. [Common Tasks](#common-tasks)
+7. [Settings and Preferences](#settings-and-preferences)
+8. [Troubleshooting](#troubleshooting)
+
+---
+
+## App Overview
+
+Bonyad is a construction services platform that connects property owners with service providers (technicians) for various construction and maintenance projects.
+
+### Key Capabilities
+- *Project Management*: Create, track, and manage construction projects
+- *Service Provider Discovery*: Browse and select technicians by service category
+- *Appointment Scheduling*: Book and manage appointments with service providers
+- *Bidding System*: Service providers can bid on available projects
+- *Contract Management*: Digital contract signing and phase-based project execution
+- *Portfolio Management*: Service providers can create and manage their professional portfolios
+- *Real-time Chat*: Communicate with service providers or users
+- *Notifications*: Stay updated on project status, bids, and appointments
+
+---
+
+## User Roles
+
+### Regular User (Property Owner)
+- Can create projects (manually or using AI)
+- Can browse service providers by category
+- Can book appointments
+- Can view project status and timeline
+- Can approve phases and sign contracts
+- Can make payments for project phases
+
+### Service Provider (Technician)
+- Can view available projects to bid on
+- Can submit bids for projects
+- Can manage portfolio and past projects
+- Can view assigned projects
+- Can complete project phases
+- Can manage appointments
+- Can view commission payments
+
+---
+
+## Main Navigation
+
+### User Home Screen (HomeView)
+*Location*: Main tab bar - Home icon (center circular button)
+
+*Features*:
+- *Header*: Logo on left, notification bell and chat icon on right (always LTR layout)
+- *Search Bar*: Search for services or service providers
+- *Service Providers Section*: Horizontal scrollable row showing all available services
+  - Each service card navigates to ServiceProvidersView showing technicians for that service
+  - "All services" button navigates to PickServiceView for all services
+- *My Projects List*: Shows user's projects with status filters
+- *Floating Chatbot Button*: Access AI assistant help
+
+*Tab Bar (Bottom)*:
+- *Profile* (left)
+- *New Project* (+) (center-left)
+- *Home* (center - circular button)
+- *My Projects* (right)
+- *Appointments* (right)
+
+### Service Provider Home Screen (HomeService)
+*Location*: Main tab bar - Home icon (center)
+
+*Features*:
+- *Header*: Logo on left, notification bell and chat icon on right (always LTR layout)
+- *Create Portfolio Button*: Purple button to create professional portfolio (shown if no portfolio exists)
+- *Available Projects*: List of projects available to bid on
+- *Assigned Projects*: Projects assigned to the technician
+- *Action Buttons* (2x2 grid):
+  - *Look for Offers*: Browse available projects
+  - *Direct Offers*: View direct offers
+  - *My Offers*: View submitted offers
+  - *Bidded Projects*: View projects where bids were placed
+
+*Tab Bar (Bottom)*:
+- *Projects* (left)
+- *Appointments* (left-center)
+- *Home* (center)
+- *Payments* (right-center)
+- *Profile* (right)
+
+---
+
+## User Features
+
+### Creating a Project
+
+*Path*: Home tab → "+" button → Choose creation method
+
+*Two Methods*:
+1. *AI-Assisted Creation*:
+   - Tap "Using AI" option
+   - Describe your project in natural language
+   - AI generates project details, phases, and budget estimates
+   - Review and edit AI suggestions
+   - Submit project
+
+2. *Manual Creation*:
+   - Tap "Manually" option
+   - Fill out project form:
+     - Project title and description
+     - Category selection
+     - Address/location
+     - Budget
+     - Duration
+     - Phases (add multiple phases)
+   - Upload photos
+   - Submit project
+
+*After Creation*:
+- Project appears in "My Projects" tab
+- Status timeline shows: Creating → Pending → Bid Received → Approved → Contract
+- Can edit project details
+- Can add/remove phases
+- Can upload additional photos
+
+### Browsing Service Providers
+
+*Path*: Home tab → Service Providers section
+
+*Options*:
+1. *By Category*: Tap any service card to see technicians for that service
+2. *View All*: Tap "All services" to see all available services in a grid
+3. *Search*: Use search bar to find specific services or providers
+
+*Service Provider Cards Show*:
+- Service category icon and color
+- Service name
+- Fixed size: 170x150 pixels
+
+### Viewing Projects
+
+*Path*: My Projects tab (or Home → My Projects section)
+
+*Features*:
+- *Status Filters*: All, Pending, Active, Completed
+- *2-Column Grid*: Projects displayed in cards
+- *Project Card Shows*:
+  - Project title
+  - Budget (with SAR icon)
+  - Status badge
+- *Tap Project*: Navigates to ProjectStatusTimelineView showing:
+  - Project timeline with status indicators
+  - Phase details
+  - Budget breakdown
+  - Edit options
+  - Contract signing (when applicable)
+
+### Managing Appointments
+
+*Path*: Appointments tab
+
+*Features*:
+- *Calendar Widget*: Shows current month, select dates
+- *Filter Tabs*: Today, Pending, Upcoming, Completed
+- *Appointment Cards Show*:
+  - Project description
+  - Date and time
+  - Address
+  - Status
+  - Total amount
+- *Actions*: View details, reschedule, cancel
+
+### Project Status Timeline
+
+*Path*: My Projects → Tap any project
+
+*Timeline Statuses*:
+1. *Creating*: Project being created (+ icon)
+2. *Pending*: Waiting for bids
+3. *Bid Received*: Bids available for review
+4. *Approved*: Project approved, contract ready
+5. *Contract*: Contract signed, work in progress
+
+*Actions Available*:
+- Edit project details
+- Add/remove phases
+- Upload photos
+- Approve phases
+- Sign contract
+- Make payments
+- View bids (if applicable)
+
+---
+
+## Service Provider Features
+
+### Creating Portfolio
+
+*Path*: Home tab → "Create Portfolio" button (purple button)
+
+*Steps*:
+1. Tap "Create Portfolio" button
+2. View benefits and information
+3. Tap "Create Portfolio" to proceed
+4. Fill out portfolio information:
+   - Bio/description
+   - Years of experience
+   - Certificates (upload photos)
+   - Select regions of service
+5. Submit portfolio
+6. Wait for admin approval
+
+*After Approval*:
+- Portfolio becomes public
+- Can generate PDF portfolio
+- Can add past projects
+- Can edit portfolio details
+
+### Bidding on Projects
+
+*Path*: Home tab → Available Projects → Tap project → "Bid Now"
+
+*Bidding Process*:
+1. View project details
+2. Review phases and requirements
+3. Tap "Bid Now" button
+4. Fill bid form:
+   - Price per phase
+   - Total price
+   - Estimated duration
+   - Notes/comments
+5. Submit bid
+
+*Bid Status*:
+- *Pending*: Waiting for user review
+- *Accepted*: Project assigned to you
+- *Rejected*: Bid not selected
+
+### Managing Assigned Projects
+
+*Path*: Home tab → Assigned Projects section
+
+*Features*:
+- View all projects assigned to you
+- See project status and timeline
+- Complete phases (only after payment received)
+- Request visit appointments
+- Upload progress photos
+- Submit phase completion
+
+*Phase Completion Rules*:
+- Phase can only be completed if payment received
+- "Complete Phase" button hidden after completion
+- Status updates automatically
+
+### Viewing Available Projects
+
+*Path*: Projects tab (or Home → Available Projects → "View All")
+
+*Features*:
+- *2-Column Grid*: All available projects
+- *Project Cards Show*:
+  - Project title
+  - Category
+  - Budget
+  - Status
+  - Distance (if location enabled)
+- *Filter Options*: By status, category
+- *Search*: Search projects by keywords
+
+*Actions*:
+- Tap project to view details
+- Submit bid
+- Request visit appointment
+
+### Managing Appointments
+
+*Path*: Appointments tab
+
+*Features*:
+- *Calendar View*: Select dates
+- *Filter Tabs*: Today, Pending, Upcoming, Completed
+- *Appointment Cards*: Show project, date, time, address
+- *Actions*: Mark as completed, view details
+
+### Portfolio Management
+
+*Path*: Profile tab → My Portfolio
+
+*Features*:
+- *Profile Card*: Shows technician name and "Public Portfolio" status
+- *Portfolio Section*:
+  - Generate PDF portfolio
+  - Download PDF
+  - View QR code for portfolio
+- *Past Projects Section*:
+  - Add new past project
+  - Edit existing projects
+  - Delete projects
+  - Upload project photos
+
+---
+
+## Common Tasks
+
+### How to Create a New Project
+
+1. Open app and go to Home tab
+2. Tap the "+" button in the bottom tab bar (center-left)
+3. Choose creation method:
+   - *AI*: Describe your project, AI will generate details
+   - *Manual*: Fill out form yourself
+4. Complete required fields (title, description, address, budget, phases)
+5. Upload photos (optional)
+6. Tap "Submit" or "Create Project"
+7. Project appears in "My Projects" tab
+
+### How to Find a Service Provider
+
+1. Go to Home tab
+2. Scroll to "Service Providers" section
+3. *Option A*: Tap any service card to see technicians for that service
+4. *Option B*: Tap "All services" to browse all services
+5. *Option C*: Use search bar to search for specific services
+6. Tap on a service provider to view their profile
+7. Book appointment or contact via chat
+
+### How to Book an Appointment
+
+1. Navigate to a service provider's profile
+2. Tap "Book Appointment" button
+3. Select date and time
+4. Enter project details (if applicable)
+5. Confirm appointment
+6. Appointment appears in "Appointments" tab
+
+### How to View Project Status
+
+1. Go to "My Projects" tab
+2. Select a project from the list
+3. View timeline showing current status
+4. See all phases and their completion status
+5. View budget breakdown
+6. Access actions: Edit, Add Address, Upload Photos, Approve Phases
+
+### How to Approve a Bid
+
+1. Go to "My Projects" tab
+2. Select project with "Bid Received" status
+3. View all bids from service providers
+4. Review bid details (price, duration, notes)
+5. Tap "Accept" on desired bid
+6. Project status changes to "Approved"
+7. Contract becomes available for signing
+
+### How to Sign Contract
+
+1. Go to project with "Approved" status
+2. Tap "Sign Contract" button
+3. Review contract terms
+4. Use digital signature tool
+5. Confirm signature
+6. Contract is signed, project status updates
+
+### How to Make Payment
+
+1. Go to project with active phases
+2. View phase details
+3. Tap "Pay" button on unpaid phase
+4. Enter payment details
+5. Confirm payment
+6. Phase becomes available for completion by service provider
+
+### How to Complete a Phase (Service Provider)
+
+1. Go to assigned project
+2. View phase details
+3. Ensure payment has been received (check payment status)
+4. Complete work for the phase
+5. Tap "Complete Phase" button (only visible if payment received)
+6. Phase status updates to "Completed"
+
+### How to Create Portfolio (Service Provider)
+
+1. Go to Home tab
+2. Tap "Create Portfolio" button (purple button above Available Projects)
+3. Read benefits and information
+4. Tap "Create Portfolio"
+5. Fill out form:
+   - Enter bio/description
+   - Select years of experience
+   - Upload certificates (photos)
+   - Select service regions
+6. Tap "Submit"
+7. Wait for admin approval
+8. Once approved, portfolio becomes public
+
+### How to Submit a Bid (Service Provider)
+
+1. Go to Projects tab or Home → Available Projects
+2. Browse available projects
+3. Tap on a project to view details
+4. Review project requirements and phases
+5. Tap "Bid Now" button
+6. Fill bid form:
+   - Enter price for each phase
+   - Set total project price
+   - Estimate duration
+   - Add notes (optional)
+7. Tap "Submit Bid"
+8. Bid status: Pending → Accepted/Rejected
+
+### How to Change Language
+
+1. Go to Profile tab
+2. Scroll to Settings section
+3. Tap "Language" option
+4. Toggle between Arabic (AR) and English (EN)
+5. App language changes immediately
+
+### How to Change Font Size
+
+1. Go to Profile tab
+2. Scroll to Settings section
+3. Tap "Font Size" option
+4. Select from menu:
+   - *Small*: 90% of base size
+   - *Medium*: 100% of base size (default)
+   - *Large*: 140% of base size
+5. Font size updates throughout app immediately
+
+### How to Toggle Dark Mode
+
+1. Go to Profile tab
+2. Scroll to Settings section
+3. Find "Dark Mode" option
+4. Toggle switch On/Off
+5. App theme changes immediately
+
+---
+
+## Settings and Preferences
+
+### Profile Tab Settings
+
+*Location*: Profile tab → Settings section
+
+*Available Settings*:
+1. *Language*: Switch between Arabic and English
+2. *Dark Mode*: Toggle light/dark theme
+3. *User Mode*: Toggle between Normal and Advanced mode
+4. *Font Size*: Small, Medium, or Large
+5. *Support Center*: Access help and support tickets
+
+### Profile Information
+
+*Location*: Profile tab → My Info card
+
+*Shows*:
+- Account status
+- Email address
+- Phone number
+- User role (User or Service Provider)
+
+### Statistics
+
+*Location*: Profile tab → Statistics buttons
+
+*Buttons*:
+- *Properties*: Number of properties (users)
+- *Appointments*: Number of appointments
+- *Tickets*: Support tickets count
+
+### My Portfolio (Service Providers Only)
+
+*Location*: Profile tab → My Portfolio section
+
+*Features*:
+- View portfolio status
+- Navigate to Portfolio Management
+- Generate PDF portfolio
+- Manage past projects
+
+### My Subscriptions (Service Providers Only)
+
+*Location*: Profile tab → My Subscriptions section
+
+*Features*:
+- View active subscriptions
+- Manage subscription plans
+- Renew subscriptions
+
+---
+
+## Navigation Structure
+
+### User Navigation Flow
+
+
+Splash Screen
+    ↓
+Login/Signup
+    ↓
+HomeView (User)
+    ├── Service Providers (horizontal scroll)
+    ├── My Projects List
+    ├── Search Bar
+    └── Tab Bar
+        ├── Profile
+        ├── New Project (+)
+        ├── Home
+        ├── My Projects
+        └── Appointments
+
+My Projects Tab
+    ├── Filter: All/Pending/Active/Completed
+    └── Project Cards (2-column grid)
+        └── Tap → ProjectStatusTimelineView
+
+Appointments Tab
+    ├── Calendar Widget
+    ├── Filter: Today/Pending/Upcoming/Completed
+    └── Appointment Cards
+
+Profile Tab
+    ├── Welcome Card
+    ├── My Info Card
+    ├── Statistics Buttons
+    ├── My Portfolio (if technician)
+    ├── My Subscriptions (if technician)
+    └── Settings
+        ├── Language
+        ├── Dark Mode
+        ├── User Mode
+        ├── Font Size
+        └── Support Center
+
+
+### Service Provider Navigation Flow
+
+
+Splash Screen
+    ↓
+Login/Signup
+    ↓
+Complete Profile (if first time)
+    ↓
+Waiting for Approval (if pending)
+    ↓
+HomeService (Service Provider)
+    ├── Create Portfolio Button
+    ├── Available Projects
+    ├── Assigned Projects
+    └── Action Buttons (2x2 grid)
+        ├── Look for Offers
+        ├── Direct Offers
+        ├── My Offers
+        └── Bidded Projects
+
+Projects Tab
+    └── AvailableProjectsView
+        └── All available projects (2-column grid)
+
+Appointments Tab
+    └── AppointmentsListView
+
+Payments Tab
+    └── CommissionPaymentView
+
+Profile Tab
+    └── Same as user profile
+
+
+---
+
+## Project Creation Flow
+
+### AI-Assisted Project Creation
+
+1. *Start*: Home tab → "+" button → "Using AI"
+2. *Conversational AI Form*:
+   - Describe project in natural language
+   - AI asks clarifying questions
+   - AI generates project details
+3. *Review AI Suggestions*:
+   - Project title and description
+   - Category
+   - Phases
+   - Budget estimates
+   - Duration estimates
+4. *Edit if Needed*: Modify any AI-generated content
+5. *Add Details*:
+   - Address/location
+   - Upload photos
+6. *Submit*: Create project
+7. *Result*: Project appears in "My Projects" with "Pending" status
+
+### Manual Project Creation
+
+1. *Start*: Home tab → "+" button → "Manually"
+2. *Fill Project Form*:
+   - Project title
+   - Description
+   - Category selection
+   - Address (required)
+   - Budget (total)
+   - Duration (estimated)
+3. *Add Phases*:
+   - Tap "Add Phase"
+   - Enter phase name
+   - Set phase budget
+   - Set phase duration
+   - Repeat for multiple phases
+4. *Upload Photos*: Add project images
+5. *Submit*: Create project
+6. *Result*: Project created, status: "Pending"
+
+---
+
+## Project Status Flow
+
+### User Project Statuses
+
+1. *Creating*: Project being created
+2. *Pending*: Waiting for service provider bids
+3. *Bid Received*: Bids available for review
+4. *Approved*: Bid accepted, contract ready
+5. *Contract*: Contract signed, work in progress
+6. *Active*: Project phases being executed
+7. *Completed*: All phases finished
+
+### Phase Status Flow
+
+1. *Pending*: Phase not started
+2. *In Progress*: Work being done
+3. *Payment Required*: Phase completed, awaiting payment
+4. *Paid*: Payment received, can be completed
+5. *Completed*: Phase finished and approved
+
+---
+
+## Bidding Process
+
+### For Service Providers
+
+1. *Browse Projects*: Projects tab or Home → Available Projects
+2. *View Project Details*: Tap project card
+3. *Review Requirements*:
+   - Project description
+   - Phases and requirements
+   - Budget range
+   - Location
+4. *Submit Bid*:
+   - Enter price per phase
+   - Set total price
+   - Estimate duration
+   - Add notes
+5. *Wait for Response*: Bid status: Pending
+6. *Outcome*:
+   - *Accepted*: Project assigned, status changes
+   - *Rejected*: Bid not selected
+
+### For Users
+
+1. *Receive Bids*: Project status changes to "Bid Received"
+2. *View Bids*: Open project, see all submitted bids
+3. *Compare Bids*: Review prices, durations, notes
+4. *Accept Bid*: Tap "Accept" on preferred bid
+5. *Result*: Project status → "Approved", contract available
+
+---
+
+## Contract and Payment Flow
+
+### Contract Signing
+
+1. *Project Status*: Must be "Approved"
+2. *Access Contract*: Tap "Sign Contract" in project view
+3. *Review Terms*: Read contract details
+4. *Sign*: Use digital signature tool
+5. *Confirm*: Submit signature
+6. *Result*: Contract signed, project status → "Contract"
+
+### Phase Payment
+
+1. *Project Status*: Must be "Contract" or "Active"
+2. *View Phases*: Open project, see phase list
+3. *Check Phase Status*: Find phase marked "Payment Required"
+4. *Pay Phase*: Tap "Pay" button
+5. *Enter Payment Details*: Complete payment form
+6. *Confirm Payment*: Submit payment
+7. *Result*: Phase status → "Paid", service provider can complete
+
+### Phase Completion (Service Provider)
+
+1. *Check Payment*: Ensure phase is marked "Paid"
+2. *Complete Work*: Finish phase requirements
+3. *Submit Completion*: Tap "Complete Phase" button
+4. *Result*: Phase status → "Completed"
+
+*Important*: "Complete Phase" button only appears if payment received
+
+---
+
+## Appointment Management
+
+### Booking Appointment (User)
+
+1. *Find Service Provider*: Browse services or search
+2. *View Provider Profile*: Tap service provider
+3. *Book Appointment*: Tap "Book Appointment"
+4. *Select Date*: Use calendar picker
+5. *Select Time*: Choose available time slot
+6. *Add Details*: Project description (optional)
+7. *Confirm*: Submit appointment request
+8. *Result*: Appointment appears in "Appointments" tab
+
+### Managing Appointments
+
+*Location*: Appointments tab
+
+*Features*:
+- *Calendar*: View and select dates
+- *Filters*:
+  - *Today*: Today's appointments
+  - *Pending*: Awaiting confirmation
+  - *Upcoming*: Future appointments
+  - *Completed*: Past appointments
+- *Appointment Card Shows*:
+  - Project/service description
+  - Date and time
+  - Address/location
+  - Status badge
+  - Total amount (if applicable)
+
+*Actions*:
+- View appointment details
+- Reschedule appointment
+- Cancel appointment
+- Mark as completed (service providers)
+
+---
+
+## Portfolio Management (Service Providers)
+
+### Creating Portfolio
+
+1. *Access*: Home tab → "Create Portfolio" button
+2. *View Information*: Read benefits and instructions
+3. *Start Creation*: Tap "Create Portfolio"
+4. *Fill Form*:
+   - *Bio*: Professional description
+   - *Years of Experience*: Select from picker
+   - *Certificates*: Upload photos of certificates
+   - *Regions*: Select service areas (can select all)
+5. *Submit*: Tap "Submit"
+6. *Wait for Approval*: Status: "Waiting for Approval"
+7. *After Approval*: Portfolio becomes public
+
+### Managing Portfolio
+
+*Location*: Profile tab → My Portfolio
+
+*Features*:
+- *Generate PDF*: Create downloadable portfolio PDF
+- *Download PDF*: Save PDF to device
+- *QR Code*: Generate QR code for portfolio sharing
+- *Past Projects*: Add, edit, delete past project entries
+- *Edit Portfolio*: Update bio, experience, certificates, regions
+
+### Adding Past Projects
+
+1. *Access*: Profile → My Portfolio → Past Projects
+2. *Add Project*: Tap "Add Past Project"
+3. *Fill Form*:
+   - Project title
+   - Description
+   - Category
+   - Completion date
+   - Upload photos
+4. *Save*: Submit project
+5. *Result*: Project appears in portfolio
+
+---
+
+## Search Functionality
+
+### Service Search
+
+*Location*: Home tab → Search bar
+
+*How to Use*:
+1. Tap search bar
+2. Toggle search type (Services or Service Providers)
+3. Enter search query
+4. View results:
+   - Service categories matching query
+   - Service providers matching query
+5. Tap result to view details
+
+### AI Search
+
+*Features*:
+- Natural language search
+- AI understands context
+- Provides relevant suggestions
+- Shows "AI is thinking..." indicator
+
+---
+
+## Notifications
+
+### Notification Types
+
+1. *Project Updates*: Status changes, new bids
+2. *Appointment Reminders*: Upcoming appointments
+3. *Bid Responses*: Bid accepted/rejected
+4. *Contract Updates*: Contract ready, signed
+5. *Payment Notifications*: Payment received, required
+6. *Chat Messages*: New messages from users/providers
+
+### Notification Access
+
+*Location*: Header → Notification bell icon (top right)
+
+*Features*:
+- Badge shows unread count
+- List of all notifications
+- Filter by type
+- Mark as read
+- Tap to navigate to related content
+
+---
+
+## Chat and Communication
+
+### Accessing Chat
+
+*Methods*:
+1. *Header Icon*: Tap chat bubble icon (top right)
+2. *From Profile*: Navigate to service provider profile → Chat
+3. *From Project*: Open project → Contact service provider
+
+### Chat Features
+
+- Real-time messaging
+- Send text messages
+- Voice messages (record and send)
+- View online/offline status
+- Message read receipts
+- Notification for new messages
+
+---
+
+## Support and Help
+
+### Support Center
+
+*Location*: Profile tab → Settings → Support Center
+
+*Features*:
+- Create support tickets
+- View ticket status
+- Filter tickets by status
+- Get help with app issues
+
+### Chatbot Assistant
+
+*Location*: Floating button (bottom right on Home screen)
+
+*Features*:
+- AI-powered help
+- Answers questions about app usage
+- Provides guidance on features
+- Helps with troubleshooting
+
+---
+
+## Troubleshooting
+
+### Common Issues
+
+#### Project Not Appearing
+- *Check*: My Projects tab
+- *Filter*: Try "All" filter
+- *Refresh*: Pull down to refresh
+- *Status*: Check if project is in correct status filter
+
+#### Cannot Complete Phase
+- *Check Payment*: Phase must be paid first
+- *Status*: Verify phase status is "Paid"
+- *Button*: "Complete Phase" only appears after payment
+
+#### Cannot Submit Bid
+- *Check Project*: Ensure project is available
+- *Status*: Project must be in "Pending" or "Bid Received" status
+- *Form*: Ensure all required fields filled
+
+#### Portfolio Not Approved
+- *Check Status*: View "Waiting for Approval" page
+- *Complete Data*: Ensure all required fields submitted
+- *Contact Support*: Use Support Center if delayed
+
+#### Font Size Not Changing
+- *Check Setting*: Profile → Font Size
+- *Refresh*: Navigate away and back
+- *Restart*: Close and reopen app
+
+#### Language Not Changing
+- *Check Setting*: Profile → Language
+- *Refresh*: Navigate to different tab and back
+- *Restart App*: Close and reopen
+
+#### Dark Mode Not Working
+- *Check Setting*: Profile → Dark Mode toggle
+- *System Setting*: Ensure device allows dark mode
+- *Refresh*: Navigate away and back
+
+---
+
+## Keyboard Shortcuts and Gestures
+
+### Swipe Gestures
+- *Swipe Back*: Navigate back (disabled in some critical flows)
+- *Pull to Refresh*: Refresh lists (projects, appointments)
+
+### Tap Gestures
+- *Single Tap*: Select item, navigate
+- *Long Press*: Context menus (where available)
+
+---
+
+## Data and Privacy
+
+### User Data
+- Profile information stored securely
+- Projects and appointments synced with server
+- Chat messages stored in database
+- Portfolio data (service providers) is public
+
+### Privacy Settings
+- Profile visibility controlled
+- Portfolio visibility (service providers)
+- Notification preferences
+
+---
+
+## Best Practices
+
+### For Users
+1. *Clear Project Descriptions*: Help service providers understand needs
+2. *Upload Photos*: Visual references improve project understanding
+3. *Review Bids Carefully*: Compare prices, durations, and notes
+4. *Respond Promptly*: Accept/reject bids in timely manner
+5. *Complete Payments*: Enable service providers to complete work
+6. *Use Chat*: Communicate with service providers for clarifications
+
+### For Service Providers
+1. *Complete Profile*: Full profile increases credibility
+2. *Create Portfolio*: Showcase past work
+3. *Detailed Bids*: Provide clear pricing and timelines
+4. *Respond Quickly*: Fast bid responses improve chances
+5. *Update Status*: Keep project status current
+6. *Professional Communication*: Use chat for clear communication
+
+---
+
+## Feature Availability
+
+### User-Only Features
+- Create projects
+- Browse service providers
+- Book appointments
+- Approve bids
+- Sign contracts
+- Make payments
+- View project timeline
+
+### Service Provider-Only Features
+- Create portfolio
+- View available projects
+- Submit bids
+- Manage assigned projects
+- Complete phases
+- View commission payments
+- Manage past projects
+
+### Shared Features
+- Profile management
+- Appointments (view/manage)
+- Chat/messaging
+- Notifications
+- Settings (language, theme, font size)
+- Support center
+
+---
+
+## Version Information
+
+*App Name*: Bonyad
+*Platform*: iOS (SwiftUI)
+*Font*: Sakkal Majalla (custom font)
+*Languages*: Arabic, English
+*Theme*: Light/Dark mode support
+*Font Sizes*: Small (90%), Medium (100%), Large (140%)
+
+---
+
+## Quick Reference
+
+### Navigation Shortcuts
+- *Home*: Tap center circular button in tab bar
+- *New Project*: Tap "+" button (left of center)
+- *Profile*: Tap profile icon (left tab)
+- *Projects*: Tap "My Projects" (right tab) or "Projects" (service providers)
+- *Appointments*: Tap calendar icon (right tab)
+
+### Common Actions
+- *Search*: Tap search bar at top
+- *Notifications*: Tap bell icon (top right)
+- *Chat*: Tap chat bubble icon (top right) or floating chatbot button
+- *Settings*: Profile tab → Settings section
+- *Help*: Floating chatbot button or Support Center
+
+---
+
+## Additional Resources
+
+### Support Channels
+1. *In-App Chatbot*: Floating button on Home screen
+2. *Support Center*: Profile → Settings → Support Center
+3. *Chat with Service Providers*: Direct messaging
+4. *Notifications*: Stay updated on all activities
+
+### Learning Resources
+- *Tutorial Overlay*: First-time user tutorial (if enabled)
+- *Help Icons*: Question mark icons in advanced mode
+- *Tooltips*: Contextual help where available
+
+---
+
+This documentation is designed for RAG systems to help users navigate and use the Bonyad app effectively. It covers all major features, navigation paths, and common tasks.
