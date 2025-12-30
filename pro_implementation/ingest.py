@@ -76,25 +76,53 @@ def fetch_documents():
 def make_prompt(document):
     how_many = (len(document["text"]) // AVERAGE_CHUNK_SIZE) + 1
     return f"""
-You take a document and you split the document into overlapping chunks for a KnowledgeBase.
+You are splitting BONYAD app documentation that has been optimized for RAG (Retrieval-Augmented Generation) chunking.
 
-The document is from the BONYAD app documentation and user guides.
-The document is of type: {document["type"]}
-The document has been retrieved from: {document["source"]}
+DOCUMENT METADATA:
+- Type: {document["type"]}
+- Source: {document["source"]}
+- Target chunks: approximately {how_many} chunks (adjust as needed)
 
-A chatbot will use these chunks to answer questions about how to use the BONYAD app.
-You should divide up the document as you see fit, being sure that the entire document is returned across the chunks - don't leave anything out.
-This document should probably be split into at least {how_many} chunks, but you can have more or less as appropriate, ensuring that there are individual chunks to answer specific questions about app features, usage instructions, and troubleshooting.
-There should be overlap between the chunks as appropriate; typically about 25% overlap or about 50 words, so you have the same text in multiple chunks for best retrieval results.
+CHUNKING STRATEGY:
+This documentation is designed for semantic search and independent section retrieval. Each chunk should:
 
-For each chunk, you should provide a headline, a summary, and the original text of the chunk.
-Together your chunks should represent the entire document with overlap.
+1. **Be Self-Contained**: Each chunk must be independently understandable and answer specific user intents
+2. **Preserve Semantic Boundaries**: Split along natural section boundaries (features, instructions, troubleshooting steps)
+3. **Include Context**: Add necessary context so each chunk makes sense standalone
+4. **Match User Query Patterns**: Structure chunks to align with how users ask questions:
+   - "How do I [action]?"
+   - "What is [feature]?"
+   - "Where can I find [item]?"
+   - "How to navigate to [section]?"
 
-Here is the document:
+5. **Maintain Overlap**: 
+   - Approximately 25% overlap between consecutive chunks
+   - Roughly 50 words of shared content
+   - Ensures critical navigation paths and instructions appear in multiple chunks
+
+6. **Optimize for Retrieval**: Each chunk should match specific user intents like:
+   - Navigation instructions (e.g., "how to access project settings")
+   - Feature explanations (e.g., "what does the estimate calculator do")
+   - Step-by-step procedures (e.g., "how to create a new project")
+   - Troubleshooting guidance (e.g., "why can't I see my invoices")
+
+CHUNK FORMAT:
+For each chunk, provide:
+- **headline**: Clear, searchable title matching potential user queries
+- **summary**: Brief description of what questions this chunk answers
+- **text**: The actual content chunk with appropriate context
+
+IMPORTANT:
+- Cover the ENTIRE document across all chunks
+- No information should be lost
+- Chunks should work independently for semantic search
+- Include navigational context where relevant (e.g., menu paths, button locations)
+
+DOCUMENT TO CHUNK:
 
 {document["text"]}
 
-Respond with the chunks.
+Respond with the chunks in the specified format.
 """
 
 
